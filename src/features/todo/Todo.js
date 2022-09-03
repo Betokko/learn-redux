@@ -20,7 +20,7 @@ const Todo = () => {
     <>
       <form onSubmit={(evt) => handleAddForm(evt)}>
         <input type="text" value={todoText} onChange={(evt) => setTodotext(evt.target.value)} />
-        <button>Добавить</button>
+        <button disabled={!todoText && true}>Добавить</button>
       </form>
       <ul className={styles.list}>
         {
