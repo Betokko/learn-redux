@@ -17,7 +17,7 @@ const Todo = () => {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <form onSubmit={(evt) => handleAddForm(evt)}>
         <input type="text" value={todoText} onChange={(evt) => setTodotext(evt.target.value)} />
         <button disabled={todoText.trim() ? false : true}>Добавить</button>
@@ -27,7 +27,7 @@ const Todo = () => {
           todos.map(todo => <TodoItem key={todo.id} {...todo} />)
         }
       </ul>
-    </>
+    </div>
   );
 };
 
