@@ -7,7 +7,9 @@ import styles from "./Todo.module.css";
 const Todo = () => {
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todo.todos);
+
   const [todoText, setTodotext] = useState("");
+
   const handleAddButton = (evt) => {
     evt.preventDefault();
     dispatch(addTodo(todoText));
@@ -22,7 +24,7 @@ const Todo = () => {
       </form>
       <ul className={styles.list}>
         {
-            todos.map(todo => <TodoItem key={todo.id} {...todo} />)
+          todos.map(todo => <TodoItem key={todo.id} {...todo} />)
         }
       </ul>
     </>

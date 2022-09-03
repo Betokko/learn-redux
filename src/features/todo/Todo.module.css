@@ -2,3 +2,7 @@
     list-style: none;
     padding: 0;
 }
+.body{
+    color: #ccc;
+    text-decoration: line-through;
+}
