@@ -10,7 +10,7 @@ const Todo = () => {
 
   const [todoText, setTodotext] = useState("");
 
-  const handleAddButton = (evt) => {
+  const handleAddForm = (evt) => {
     evt.preventDefault();
     dispatch(addTodo(todoText));
     setTodotext("");
@@ -18,7 +18,7 @@ const Todo = () => {
 
   return (
     <>
-      <form onSubmit={(evt) => handleAddButton(evt)}>
+      <form onSubmit={(evt) => handleAddForm(evt)}>
         <input type="text" value={todoText} onChange={(evt) => setTodotext(evt.target.value)} />
         <button>Добавить</button>
       </form>

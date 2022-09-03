@@ -17,7 +17,7 @@ const TodoItem = ({ body, id, completed }) => {
   return (
     <li>
       <label >
-        <input type="checkbox" onChange={handleToggle} />
+        <input type="checkbox" checked={completed} onChange={handleToggle} />
         <span className={completed && styles.body}>{body}</span>
       </label>
       <button onClick={handleDelete}>Удалить</button>
